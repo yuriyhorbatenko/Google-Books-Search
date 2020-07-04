@@ -1,24 +1,22 @@
+require("dotenv").config()
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+const keys = process.env.MONGO_KEYS;
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://" + keys + "@ds241298.mlab.com:41298/heroku_smp6hrvd";
 
-// Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
+
 app.use(routes);
+mongoose.connect(MONGODB_URI);
 
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
-
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+app.listen(PORT, function () {
+  console.log("Server listening on: http://localhost:" + PORT + "!");
 });
