@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-const keys = process.env.MONGO_KEYS;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://" + keys + "@ds241298.mlab.com:41298/heroku_smp6hrvd";
+const mongoLink = process.env.MONGO_KEY;
+const MONGODB_URI = process.env.MONGODB_URI || mongoLink;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
