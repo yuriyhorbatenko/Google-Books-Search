@@ -3,10 +3,10 @@ import Form from "../components/Form";
 import List from "../components/List";
 import API from "../utils/API";
 
-class Search extends Component {
+class Search extends React.Component {
   state = {
-    books: [],
     value: "",
+    books: [],
   };
 
   componentDidMount() {
@@ -24,7 +24,7 @@ class Search extends Component {
     }
   }
 
-  searchBooks = () => {
+  searchBooks = (query) => {
     API.getBook(query)
       .then(res => this.setState({ books: res.data.items.map(bookData => this.createBook(bookData)) }))
       .catch(err => console.error(err));
