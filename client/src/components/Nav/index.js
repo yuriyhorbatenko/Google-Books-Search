@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./nav.css";
 
 
 
-function Navbar() {
+function Nav() {
   return (
 
 
@@ -30,4 +31,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Nav;
