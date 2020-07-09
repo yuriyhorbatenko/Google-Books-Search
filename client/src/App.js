@@ -5,7 +5,6 @@ import Nav from "./components/Nav";
 import Jumbotron from "./components/Jumbotron";
 import Wrapper from "./components/Wrapper";
 
-import NoMatch from "./pages/NoMatch";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 
@@ -14,14 +13,13 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="page">
           <Nav />
           <Jumbotron />
           <Wrapper>
             <Route exact path="/" component={Search} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
-            <Route component={NoMatch} />
           </Wrapper>
         </div>
       </Router >

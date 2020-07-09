@@ -1,0 +1,23 @@
+.navbar {
+    background-color: rgb(105,105,105);
+    height: 75px;
+}
+
+.home-link {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.search-link {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.saved-link {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+

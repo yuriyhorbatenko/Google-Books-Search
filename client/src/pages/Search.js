@@ -10,7 +10,7 @@ class Search extends React.Component {
   };
 
   componentDidMount() {
-    this.searchBooks();
+    this.searchBooks("top");
   }
 
   createBook = bookData => {
@@ -37,12 +37,6 @@ class Search extends React.Component {
     });
   };
 
-  // deleteBook = id => {
-  //   API.deleteBook(id)
-  //     .then(res => this.loadBooks())
-  //     .catch(err => console.log(err));
-  // };
-
   handleFormSubmit = event => {
     event.preventDefault();
     this.searchBooks(this.state.search);
@@ -56,7 +50,8 @@ class Search extends React.Component {
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
-        <div className="container">
+
+        <div className="container-books">
           <h2>Results</h2>
           <List books={this.state.books} />
         </div>

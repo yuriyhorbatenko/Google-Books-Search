@@ -3,6 +3,7 @@ import Jumbotron from "../components/Jumbotron";
 
 function NoMatch() {
   return (
+
     <Jumbotron>
       <h1>404 Page Not Found</h1>
       <h1>
@@ -11,6 +12,7 @@ function NoMatch() {
               </span>
       </h1>
     </Jumbotron>
+
   );
 }
 
