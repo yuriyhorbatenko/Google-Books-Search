@@ -1,9 +1,23 @@
 # Google-Books-Search
 
-**Google-Books-Search**
+**Full stack application**
 
 **Unit 20: React Assignment**
 
+**Description:**
+
+React-based Google Books Search app that displays books on user searches. Users can save them to review or purchase later.
+
+![](public/assets/img/screen.jpg)
+
+**Link to Heroku and Github Deployments:**
+
+https://clicky-game-yuriy.herokuapp.com/
+
+https://github.com/yuriyhorbatenko/Clicky-Game
+
 **Languages & Technologies used:**
 
-HTML, CSS, Javascript, Jquery, React, Node 
+MERN - MongoDB, Express.js, React.js, Node.js, Google Books API. 
+
+Enjoy
