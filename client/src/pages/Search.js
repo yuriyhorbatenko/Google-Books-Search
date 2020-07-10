@@ -45,6 +45,7 @@ class Search extends React.Component {
   render() {
     return (
       <div>
+
         <Form
           search={this.state.search}
           handleInputChange={this.handleInputChange}
@@ -52,9 +53,9 @@ class Search extends React.Component {
         />
 
         <div className="container-books">
-          <h2>Results</h2>
           <List books={this.state.books} />
         </div>
+
       </div>
     )
   }

@@ -1,21 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./nav.css";
 
 function Nav() {
   return (
 
-    <div className="navbar">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+      <div className="collapse navbar-collapse" id="navbarNav">
 
-      <Link className="home-link" to="/">Google Books Search</Link>
+        <ul className="navbar-nav">
+          <li className="nav-item active">
+            <a className="nav-link" href="/" id="home-link">Home <span className="sr-only">(current)</span></a>
+          </li>
 
-      <Link className="search-link" to="/search">Search</Link>
+          <li className="nav-item active">
+            <a className="nav-link" href="/saved" id="saved-link">Saved</a>
+          </li>
+        </ul>
 
-      <Link className="saved-link" to="/saved">Saved</Link>
-
-    </div>
-
-
+      </div>
+    </nav>
 
   );
 }

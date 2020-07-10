@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import "./list.css";
+import Fade from 'react-reveal/Fade';
 
 class List extends Component {
 
@@ -19,7 +21,9 @@ class List extends Component {
       API.deleteBook(book._id)
         .then(deletedBook => this.setState({ savedBooks: this.state.savedBooks.filter(book => book._id !== deletedBook._id) }))
         .catch(err => console.error(err));
-    } else {
+    }
+
+    else {
       API.saveBook(book)
         .then(savedBook => this.setState({ savedBooks: this.state.savedBooks.concat([savedBook]) }))
         .catch(err => console.error(err));
@@ -28,40 +32,49 @@ class List extends Component {
 
   render() {
     return (
-      <div>
-        {!this.props.books.length ? (
-          <h1 className="text-center">No Results to Display</h1>
-        ) : (
-            <div>
 
-              {this.props.books.map(result => (
+      <Fade bottom>
+        <div>
+          <div>
 
-                <div className="Book-card" key={result._id}>
-                  <div className="row">
+            {this.props.books.map(result => (
 
-                    <div className="col-md-2">
-                      <img alt={result.title} className="img-fluid" src={result.image} />
-                    </div>
+              <div className="Book-card" key={result._id}>
+                <div className="row">
 
-                    <div className="col-md-10">
-                      <div className="card-body">
-                        <h5 className="card-title">{result.title} by {result.authors}</h5>
-                        <p className="book-description">{result.description}</p>
-                        <div>
-                          <a href={result.link} className="btn badge-pill btn-outline-dark mt-3" target="_blank" >View</a>
-                          <button onClick={() => this.handleSave(result)} className="btn badge-pill btn-outline-warning mt-3 ml-3" >
-                            {this.state.savedBooks.map(book => book._id).includes(result._id) ? "Unsave" : "Save"}
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+                  <div className="col-2"></div>
 
+                  <div className="col-1">
+                    <img alt={result.title} className="book-img" src={result.image} />
                   </div>
+
+                  <div className="col-7 book-body">
+                    <div className="">
+
+                      <h5 className="book-title">"{result.title}" by {result.authors}</h5>
+                      <p className="book-description">{result.description}</p>
+
+                      <div>
+                        <a href={result.link} className="btn btn-outline-primary button-view" target="_blank" >View</a>
+
+                        <button onClick={() => this.handleSave(result)} className="btn btn-outline-success button-save" >
+                          {this.state.savedBooks.map(book => book._id).includes(result._id) ? "Unsave" : "Save"}
+                        </button>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div className="col-2"></div>
+
                 </div>
-              ))}
-            </div>
-          )}
-      </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </Fade>
     )
   }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import List from "../components/List";
+import Zoom from "react-reveal/Zoom";
 
 class Saved extends Component {
   state = {
@@ -15,8 +16,10 @@ class Saved extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h2>Saved books</h2>
+      <div className="container-books">
+        <Zoom>
+          <h2 className="saved-header">Saved books</h2>
+        </Zoom>
         <List books={this.state.savedBooks} />
       </div>
     )

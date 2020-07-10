@@ -1,0 +1,48 @@
+#jumbotron {
+    background-image: url(../../img/book1.jpg);
+    box-shadow: 0px 5px 15px -2px rgba(0,0,0,0.37);
+}
+
+#g1 {
+color: blue;
+font-size: 60px;
+}
+
+#o2 {
+color: red;
+font-size: 60px;
+}
+
+#o3 {
+color: yellow;
+font-size: 60px;
+}
+
+#g4 {
+color: blue;
+font-size: 60px;
+}
+
+#l5 {
+color: green;
+font-size: 60px;
+}
+
+#e6 {
+color: red;
+font-size: 60px;
+}
+
+#header {
+    text-shadow: 1px 1px 0 #ffffff57, 1px -1px 0 #ffffff57, -1px 1px 0 #ffffff57, -1px -1px 0 #ffffff57, 1px 1px 0 #ffffff57, 0px 1px 0 #ffffff57, -1px 0px 0 #ffffff57, 0px -1px 0 #ffffff57;
+}
+
+#b7 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: none;
+}
+
+
