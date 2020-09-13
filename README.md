@@ -12,8 +12,6 @@ React-based Google Books Search app that displays books on user searches. Users 
 
 **Link to Heroku and Github Deployments:**
 
-https://clicky-game-yuriy.herokuapp.com/
-
 https://google-books-search-yuriy.herokuapp.com
 
 **Languages & Technologies used:**
